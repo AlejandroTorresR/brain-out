@@ -16,17 +16,16 @@ export class HomePage {
     if(fruit === 'watermelon'){
       console.log('success', fruit)
     } else { console.log('error', fruit) }
-    this.presentAlert();
+    this.presentAlert(fruit);
   }
 
-  async presentAlert() {
+  async presentAlert(fruit) {
     const alert = await this.alertController.create({
       header: 'Alert',
       subHeader: 'Subtitle',
-      message: 'This is an alert message.',
+      message: `This is an alert message ${fruit}`,
       buttons: ['OK']
     });
-
     await alert.present();
   }
 
