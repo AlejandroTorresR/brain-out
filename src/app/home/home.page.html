@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2 class="level">{{level}}</h2>
+  <div class="question">{{question}}</div>
+  <div class="fruit {{f}}" *ngFor="let f of fruits" (click)="clickFruit(f)"></div>
+</ion-content>
