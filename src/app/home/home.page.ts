@@ -15,21 +15,31 @@ export class HomePage {
     '¡Lo encontraste!'
   ]
 
-  public interactiveAnimationOption: Object = {
+  public lottieError = {
     loop: false,
     prerender: false,
     autoplay: false,
     autoloadSegments: false,
     path: 'assets/lottie/anim-close.json'
-  }
+  };
+  public lottieSuccess = {
+    loop: false,
+    prerender: false,
+    autoplay: false,
+    autoloadSegments: false,
+    path: 'assets/lottie/anim-ok.json'
+  };
   public anim: any;
 
   constructor(public alertService: AlertService) {}
 
-  clickFruit(fruit){
+  clickFruit(fruit, index){
+    console.log(fruit, index)
     if(fruit === 'watermelon'){
+      console.log('success');
       this.alertService.presentAlert(this.params[3], this.params[4]);
-    } else { this.playLottie(); }
+    }
+    this.playLottie();
   }
 
   playLottie() {

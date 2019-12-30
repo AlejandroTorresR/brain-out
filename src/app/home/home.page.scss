@@ -1,3 +1,10 @@
+lottie-animation-view{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
 .level{
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
@@ -12,12 +19,13 @@
 }
 
 .fruit{
+  display: inline-block;
+  position: relative;
   width: 100px;
   height: 100px;
   text-align: center;
   border-radius: 4px;
   margin: 16px;
-  display: inline-block;
 }
 
 .strawberry{
