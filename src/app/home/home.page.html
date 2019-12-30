@@ -10,7 +10,13 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h2 class="level">{{level}}</h2>
-  <div class="question">{{question}}</div>
-  <div class="fruit {{f}}" *ngFor="let f of fruits" (click)="clickFruit(f)"></div>
+  <lottie-animation-view
+      (animCreated)="handleAnimation($event)"
+      [hidden]="anim.isPaused"
+      [options]="interactiveAnimationOption">
+  </lottie-animation-view>
+
+  <h2 class="level">{{params[1]}}</h2>
+  <div class="question">{{params[2]}}</div>
+  <div class="fruit {{f}}" *ngFor="let f of params[0]" (click)="clickFruit(f)"></div>
 </ion-content>
