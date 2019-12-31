@@ -15,35 +15,23 @@ export class HomePage {
     '¡Lo encontraste!'
   ]
 
-  selectedAnimation: any = "interactive";
-  animations: any;
   public interactiveAnimationOption = {
     loop: false,
     prerender: false,
     autoplay: false,
     autoloadSegments: false,
-    path: 'assets/lottie/anim-close.json'
+    path: 'assets/lottie/anim-success.json'
   };
-  public bodymovinAnimations = [
-    { path: 'assets/lottie/anim-close.json' }
-  ];
-  public lottieAnimations = [
-    { path: 'assets/lottie/anim-ok.json' }
-  ];
+
   public anim: any;
 
   constructor(public alertService: AlertService) {}
 
   clickFruit(fruit, index){
     if(fruit === 'watermelon'){
-      console.log('success');
-      this.animations = this.lottieAnimations;
+      this.playLottie();
       this.alertService.presentAlert(this.params[3], this.params[4]);
-    } else {
-      this.animations = this.bodymovinAnimations;
     }
-    this.playLottie();
-    console.log(this.interactiveAnimationOption)
   }
 
   playLottie() {
@@ -53,17 +41,6 @@ export class HomePage {
 
   handleAnimation(anim) {
     this.anim = anim;
-  }
-
-  changeAnimations() {
-    switch (this.selectedAnimation) {
-      case "lottie":
-        this.animations = this.lottieAnimations;
-        break;
-      case "bodymovin":
-        this.animations = this.bodymovinAnimations;
-        break;
-    }
   }
 
 }

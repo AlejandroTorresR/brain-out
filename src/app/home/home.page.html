@@ -10,14 +10,17 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+
+  <lottie-animation-view
+    (animCreated)="handleAnimation($event)"
+    [options]="interactiveAnimationOption">
+  </lottie-animation-view>
+    
   <h2 class="level">{{params[1]}}</h2>
   <div class="question">{{params[2]}}</div>
   <div class="fruit {{f}}" *ngFor="let f of params[0]; let i = index" (click)="clickFruit(f, i)">
-    <lottie-animation-view
-      [width]="100"
-      [height]="100"
-      (animCreated)="handleAnimation($event)"
-      [options]="interactiveAnimationOption">
-    </lottie-animation-view>
+    <div class="choice error animated bounce" *ngIf="f === active"><ion-icon name="close"></ion-icon></div>
+    <div class="choice success animated bounce" *ngIf="f === active"><ion-icon name="checkmark"></ion-icon></div>
   </div>
+
 </ion-content>
