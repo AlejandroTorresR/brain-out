@@ -19,8 +19,8 @@
   <h2 class="level">{{params[1]}}</h2>
   <div class="question">{{params[2]}}</div>
   <div class="fruit {{f}}" *ngFor="let f of params[0]; let i = index" (click)="clickFruit(f, i)">
-    <div class="choice error animated bounce" *ngIf="f === active"><ion-icon name="close"></ion-icon></div>
-    <div class="choice success animated bounce" *ngIf="f === active"><ion-icon name="checkmark"></ion-icon></div>
+    <div class="choice error animated heartBeat" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
+    <div class="choice success animated rubberBand slow" *ngIf="f === success"><ion-icon name="checkmark"></ion-icon></div>
   </div>
 
 </ion-content>

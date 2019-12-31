@@ -24,13 +24,21 @@ export class HomePage {
   };
 
   public anim: any;
+  public error: string;
+  public success: string;
 
   constructor(public alertService: AlertService) {}
 
   clickFruit(fruit, index){
     if(fruit === 'watermelon'){
+      this.success = fruit;
       this.playLottie();
       this.alertService.presentAlert(this.params[3], this.params[4]);
+    } else {
+      this.error = fruit;
+      setTimeout(()=>{
+        this.error = '';
+      }, 1000)
     }
   }
 
