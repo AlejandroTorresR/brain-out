@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button routerLink="/home">
+      <ion-button href="/home">
         <ion-icon name="apps"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -14,7 +14,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content>
 
   <lottie-animation-view
     (animCreated)="handleAnimation($event)"
@@ -23,9 +23,14 @@
     
   <h2 class="level">{{params[1]}}</h2>
   <div class="question">{{params[2]}}</div>
-  <div class="fruit {{f}}" *ngFor="let f of params[0]; let i = index" (click)="clickFruit(f, i)">
-    <div class="choice error animated heartBeat" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
-    <div class="choice success animated rubberBand slow" *ngIf="f === success"><ion-icon name="checkmark"></ion-icon></div>
-  </div>
+
+  <ion-row>
+    <ion-col size="6" *ngFor="let f of params[0]; let i = index">
+      <div class="fruit {{f}}" (click)="clickFruit(f, i)">
+        <div class="choice error animated heartBeat" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
+        <div class="choice success animated rubberBand slow" *ngIf="f === success"><ion-icon name="checkmark"></ion-icon></div>
+      </div>
+    </ion-col>
+  </ion-row>
 
 </ion-content>
