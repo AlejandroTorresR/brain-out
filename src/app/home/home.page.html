@@ -13,7 +13,7 @@
 
   <ion-row>
     <ion-col size="6" *ngFor="let l of levels; let i = index">
-      <ion-card>{{l}}</ion-card>
+      <ion-button size="block" routerLink="/{{l.url}}">{{l.name}}</ion-button>
     </ion-col>
   </ion-row>
 
