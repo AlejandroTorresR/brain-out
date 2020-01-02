@@ -3,21 +3,23 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
-import { HomePage } from './home.page';
+import { lvl001Page } from './lvl001.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    LottieAnimationViewModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: lvl001Page
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [lvl001Page]
 })
-export class HomePageModule {}
+export class lvl001Module {}
