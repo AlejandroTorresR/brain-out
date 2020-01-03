@@ -7,6 +7,11 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
+        <ion-row>
+          <ion-col class="ion-text-center"><ion-icon name="musical-note"></ion-icon></ion-col>
+          <ion-col class="ion-text-center"><ion-icon name="volume-high"></ion-icon></ion-col>
+          <ion-col class="ion-text-center"><ion-icon name="phone-portrait"></ion-icon></ion-col>
+        </ion-row>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">

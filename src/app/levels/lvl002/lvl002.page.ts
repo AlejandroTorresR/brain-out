@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { AlertService } from '../../providers/alert.service';
 
 @Component({
-  selector: 'app-lvl001',
-  templateUrl: 'lvl001.page.html',
-  styleUrls: ['lvl001.page.scss'],
+  selector: 'app-lvl002',
+  templateUrl: 'lvl002.page.html',
+  styleUrls: ['lvl002.page.scss'],
 })
-export class lvl001Page {
+export class lvl002Page {
   public params: any = [
     ['strawberry', 'watermelon', 'apple', 'banana'],
-    'Lvl. 1 ',
-    'Encuentra el más grande',
+    'Lvl. 2 ',
+    '¿Cuantos patos hay?',
     '!Felicidades!',
-    '¡Lo encontraste!'
+    'Genial'
   ]
 
   public interactiveAnimationOption = {
