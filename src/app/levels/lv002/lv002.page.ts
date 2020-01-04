@@ -8,7 +8,7 @@ import { AlertService } from '../../providers/alert.service';
 })
 export class lv002Page {
   public params: any = [
-    ['strawberry', 'watermelon', 'apple', 'banana'],
+    ['8', '9', '10', '11'],
     'Lv. 2 ',
     '¿Cuantos patos hay?',
     '!Felicidades!',
@@ -29,13 +29,13 @@ export class lv002Page {
 
   constructor(public alertService: AlertService) {}
 
-  clickFruit(fruit, index){
-    if(fruit === 'watermelon'){
-      this.success = fruit;
+  clickAnswer(answer){
+    if(answer === '9'){
+      this.success = answer;
       this.playLottie();
       this.alertService.presentAlert(this.params[3], this.params[4]);
     } else {
-      this.error = fruit;
+      this.error = answer;
       setTimeout(()=>{
         this.error = '';
       }, 1000)

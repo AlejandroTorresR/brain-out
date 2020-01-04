@@ -1,21 +1,15 @@
-.fruit{
+.btn{
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 40px;
   text-align: center;
   border-radius: 4px;
   margin: 16px auto;
+  background-color: rgb(0, 162, 255);
+  color: #fff;
+  padding-top: 8px;
 }
 
-.strawberry{
-  background-color: red;
-}
-.banana{
-  background-color: yellow;
-}
-.apple{
-  background-color: orange;
-}
-.watermelon{
-  background-color: green;
+.duck{
+  width: 48px;
 }
