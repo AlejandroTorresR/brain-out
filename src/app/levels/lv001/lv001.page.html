@@ -26,9 +26,10 @@
 
   <ion-row>
     <ion-col size="6" *ngFor="let f of params[0]; let i = index">
-      <div class="fruit {{f}}" (click)="clickFruit(f, i)">
+      <div class="fruit" (click)="clickFruit(f, i)">
         <div class="choice error animated heartBeat" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
         <div class="choice success animated rubberBand slow" *ngIf="f === success"><ion-icon name="checkmark"></ion-icon></div>
+        <img src="assets/lv001/{{f}}.svg" class="{{f}}" />
       </div>
     </ion-col>
   </ion-row>

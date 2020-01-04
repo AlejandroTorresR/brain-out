@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { AlertService } from '../../providers/alert.service';
 
 @Component({
-  selector: 'app-lvl001',
-  templateUrl: 'lvl001.page.html',
-  styleUrls: ['lvl001.page.scss'],
+  selector: 'app-lv001',
+  templateUrl: 'lv001.page.html',
+  styleUrls: ['lv001.page.scss'],
 })
-export class lvl001Page {
+export class lv001Page {
   public params: any = [
     ['strawberry', 'watermelon', 'apple', 'banana'],
-    'Lvl. 1 ',
+    'Lv. 1 ',
     'Encuentra el más grande',
     '!Felicidades!',
     '¡Lo encontraste!'

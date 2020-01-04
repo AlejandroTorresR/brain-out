@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LottieAnimationViewModule } from 'ng-lottie';
 
-import { lvl002Page } from './lvl002.page';
+import { lv001Page } from './lv001.page';
 
 @NgModule({
   imports: [
@@ -16,10 +16,10 @@ import { lvl002Page } from './lvl002.page';
     RouterModule.forChild([
       {
         path: '',
-        component: lvl002Page
+        component: lv001Page
       }
     ])
   ],
-  declarations: [lvl002Page]
+  declarations: [lv001Page]
 })
-export class lvl002Module {}
+export class lv001Module {}

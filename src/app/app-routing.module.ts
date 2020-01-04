@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'lvl001', pathMatch: 'full' },
+  { path: '', redirectTo: 'lv001', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'lvl001', loadChildren: './levels/lvl001/lvl001.module#lvl001Module' },
-  { path: 'lvl002', loadChildren: './levels/lvl002/lvl002.module#lvl002Module' },
+  { path: 'lv001', loadChildren: './levels/lv001/lv001.module#lv001Module' },
+  { path: 'lv002', loadChildren: './levels/lv002/lv002.module#lv002Module' },
 ];
 
 @NgModule({

@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   public levels: any = [
-    {name: 'lvl. 1', url: '/lvl001'},
-    {name: 'lvl. 2', url: '/lvl002'},
-    {name: 'lvl. 3', url: '/lvl003'},
-    {name: 'lvl. 4', url: '/lvl004'},
-    {name: 'lvl. 5', url: '/lvl005'}
+    {name: 'lv. 1', url: '/lv001'},
+    {name: 'lv. 2', url: '/lv002'},
+    {name: 'lv. 3', url: '/lv003'},
+    {name: 'lv. 4', url: '/lv004'},
+    {name: 'lv. 5', url: '/lv005'}
   ];
 
   constructor() {}
