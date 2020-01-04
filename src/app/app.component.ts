@@ -10,14 +10,39 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
+      title: 'Bono diario',
+      url: '/calendar',
+      icon: 'calendar'
     },
     {
-      title: 'List',
-      url: '/lv001',
-      icon: 'list'
+      title: 'Tienda',
+      url: '/cart',
+      icon: 'cart'
+    },
+    {
+      title: 'Calificación',
+      url: 'market://details?id=com.zurdo.duelist',
+      icon: 'star'
+    },
+    {
+      title: 'Sugerencia',
+      url: '/chatboxes',
+      icon: 'chatboxes'
+    },
+    {
+      title: 'Compartir',
+      url: '/share',
+      icon: 'share'
+    },
+    {
+      title: 'Terminos y condiciones',
+      url: '/terms',
+      icon: 'clipboard'
+    },
+    {
+      title: 'Poilitica de privacidad',
+      url: '/privacy',
+      icon: 'copy'
     }
   ];
   constructor(
