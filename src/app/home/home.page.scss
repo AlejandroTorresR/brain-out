@@ -1,43 +1,9 @@
-lottie-animation-view{
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.level{
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  text-align: center;
-  color: rgba(255, 255, 0, 0.733);
-  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-}
-
-.question{
-  text-align: center;
-  font-weight: bold;
-}
-
-.fruit{
-  display: inline-block;
-  position: relative;
-  width: 100px;
+.btn-level{
   height: 100px;
-  text-align: center;
-  border-radius: 4px;
-  margin: 16px;
-}
-
-.strawberry{
-  background-color: red;
-}
-.banana{
-  background-color: yellow;
-}
-.apple{
-  background-color: orange;
-}
-.watermelon{
-  background-color: green;
+  .choice{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    margin: 0;
+  }
 }

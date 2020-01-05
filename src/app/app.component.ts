@@ -59,6 +59,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       }
+      if(!localStorage.getItem('progressLv')){
+        localStorage.setItem('progressLv', 'lv.1')
+      }
     });
   }
 }
