@@ -9,7 +9,7 @@ import { AlertService } from '../../providers/alert.service';
 export class lv002Page {
   public params: any = [
     ['8', '9', '10', '11'],
-    'Lv. 2 ',
+    'Lv. 2',
     '¿Cuantos patos hay?',
     '!Felicidades!',
     'Genial'

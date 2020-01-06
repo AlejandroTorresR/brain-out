@@ -8,6 +8,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  public actions = {
+    music: false,
+    sound: false,
+    vibrate: false
+  }
   public appPages = [
     {
       title: 'Bono diario',
@@ -63,5 +68,19 @@ export class AppComponent {
         localStorage.setItem('progressLv', '/lv001')
       }
     });
+  }
+
+  actionBtn(action){
+    switch(action) {
+      case 'music':
+        this.actions.music = !this.actions.music
+        break;
+      case 'sound':
+        this.actions.sound = !this.actions.sound
+        break;
+      case 'vibrate':
+        this.actions.vibrate = !this.actions.vibrate
+        break;
+    }
   }
 }

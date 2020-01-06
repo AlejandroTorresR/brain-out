@@ -51,3 +51,12 @@ lottie-animation-view{
   text-align: center;
   font-weight: bold;
 }
+
+.btn-row{
+  .turn-off{
+    position: absolute;
+    left: calc(50% - 6px);
+    color:red;
+    font-size: 2rem;
+  }
+}

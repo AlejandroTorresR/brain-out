@@ -14,9 +14,9 @@
     <ion-col size="6" *ngFor="let l of levels; let i = index">
       <ion-button size="block" [routerLink]="[l.url]" [routerDirection]="'root'" color="light" class="btn-level" [disabled]="!l.solved && progressLv !== l.url">
         <h3 class="level">{{l.name}}</h3>
-        <div class="choice error" *ngIf="!l.solved"><ion-icon name="help"></ion-icon></div>
+        <div class="choice error animated heartBeat infinite" *ngIf="!l.solved"><ion-icon name="help"></ion-icon></div>
         <div class="choice lock" *ngIf="progressLv !== l.url"><ion-icon name="lock"></ion-icon></div>
-        <div class="choice success" *ngIf="l.solved"><ion-icon name="checkmark"></ion-icon></div>
+        <div class="choice success animated pulse infinite" *ngIf="l.solved"><ion-icon name="checkmark"></ion-icon></div>
       </ion-button>
     </ion-col>
   </ion-row>

@@ -7,10 +7,25 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-row>
-          <ion-col class="ion-text-center"><ion-button><ion-icon name="musical-note"></ion-icon></ion-button></ion-col>
-          <ion-col class="ion-text-center"><ion-button><ion-icon name="volume-high"></ion-icon></ion-button></ion-col>
-          <ion-col class="ion-text-center"><ion-button><ion-icon name="phone-portrait"></ion-icon></ion-button></ion-col>
+        <ion-row class="btn-row">
+          <ion-col class="ion-text-center">
+            <ion-button (click)="actionBtn('music')">
+              <ion-icon name="musical-note"></ion-icon>
+              <span class="turn-off" *ngIf="actions.music">/</span>
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-button (click)="actionBtn('sound')">
+              <ion-icon name="volume-high"></ion-icon>
+              <span class="turn-off" *ngIf="actions.sound">/</span>
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-button (click)="actionBtn('vibrate')">
+              <ion-icon name="phone-portrait"></ion-icon>
+              <span class="turn-off" *ngIf="actions.vibrate">/</span>  
+            </ion-button>
+          </ion-col>
         </ion-row>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">

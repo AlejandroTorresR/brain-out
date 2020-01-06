@@ -9,10 +9,10 @@ import { AlertService } from '../../providers/alert.service';
 export class lv004Page {
   public params: any = [
     ['strawberry', 'watermelon', 'apple', 'banana'],
-    'Lv. 1 ',
-    'Encuentra el más grande',
+    'Lv. 4',
+    '¿Puedes encontrar cual es el diferente?',
     '!Felicidades!',
-    '¡Lo encontraste!'
+    '¡Eres brillante!'
   ]
 
   public interactiveAnimationOption = {
