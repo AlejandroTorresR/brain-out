@@ -33,7 +33,7 @@ export class lv002Page {
     if(answer === '9'){
       this.success = answer;
       this.playLottie();
-      this.alertService.presentAlert(this.params[3], this.params[4]);
+      this.alertService.presentAlert(this.params[3], this.params[4], '/lv002', '/lv003');
     } else {
       this.error = answer;
       setTimeout(()=>{

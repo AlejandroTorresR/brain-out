@@ -60,7 +60,7 @@ export class AppComponent {
       this.splashScreen.hide();
       }
       if(!localStorage.getItem('progressLv')){
-        localStorage.setItem('progressLv', 'lv.1')
+        localStorage.setItem('progressLv', '/lv001')
       }
     });
   }

@@ -33,7 +33,7 @@ export class lv001Page {
     if(fruit === 'watermelon'){
       this.success = fruit;
       this.playLottie();
-      this.alertService.presentAlert(this.params[3], this.params[4]);
+      this.alertService.presentAlert(this.params[3], this.params[4], '/lv001', '/lv002');
     } else {
       this.error = fruit;
       setTimeout(()=>{
