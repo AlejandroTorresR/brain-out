@@ -7,15 +7,10 @@
   margin: 16px auto;
 }
 
-.strawberry{
-  padding: 8px;
-}
-.banana{
-  padding: 14px;
-}
-.apple{
-  padding: 2px;
-}
-.watermelon{
-  padding: 28px;
+.sun{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 72px;
+  z-index: 0;
 }

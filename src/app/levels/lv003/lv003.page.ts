@@ -8,7 +8,7 @@ import { AlertService } from '../../providers/alert.service';
 })
 export class lv003Page {
   public params: any = [
-    ['strawberry', 'watermelon', 'apple', 'banana'],
+    ['dog', 'cat', 'lion', 'elephant'],
     'Lv. 3',
     '¿Quién es el más alto?',
     '!Felicidades!',
@@ -29,8 +29,8 @@ export class lv003Page {
 
   constructor(public alertService: AlertService) {}
 
-  clickFruit(fruit, index){
-    if(fruit === 'watermelon'){
+  clickFruit(fruit){
+    if(fruit === 'sun'){
       this.success = fruit;
       this.playLottie();
       this.alertService.presentAlert(this.params[3], this.params[4], '/lv003', '/lv004');
