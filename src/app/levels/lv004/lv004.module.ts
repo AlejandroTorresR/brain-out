@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LottieAnimationViewModule } from 'ng-lottie';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { lv004Page } from './lv004.page';
 
@@ -12,6 +13,7 @@ import { lv004Page } from './lv004.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    DragDropModule,
     LottieAnimationViewModule.forRoot(),
     RouterModule.forChild([
       {
