@@ -8,12 +8,13 @@ import { AlertService } from '../../providers/alert.service';
 })
 export class lv004Page {
   public params: any = [
-    ['strawberry', 'watermelon', 'apple', 'banana'],
+    [0, 1, 2, 3, 4, 5],
     'Lv. 4',
     '¿Puedes encontrar cual es el diferente?',
     '!Felicidades!',
     '¡Eres brillante!'
-  ]
+  ];
+  public answer: any = this.getRandomArbitrary(0,5)
 
   public interactiveAnimationOption = {
     loop: false,
@@ -29,7 +30,12 @@ export class lv004Page {
 
   constructor(public alertService: AlertService) {}
 
-  clickFruit(fruit, index){
+  getRandomArbitrary(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  clickFruit(fruit){
+    console.log(fruit)
     if(fruit === 'watermelon'){
       this.success = fruit;
       this.playLottie();
