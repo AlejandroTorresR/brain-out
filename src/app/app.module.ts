@@ -12,13 +12,16 @@ import { LoadingService } from './providers/loading.service';
 import { AlertService } from './providers/alert.service';
 import { GeneralService } from './providers/general.service';
 
+import { ModalKeyPageModule } from './components/modalkey/modalkey.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
-    AppRoutingModule
+    AppRoutingModule,
+    ModalKeyPageModule
   ],
   providers: [
     StatusBar,

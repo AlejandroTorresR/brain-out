@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { Platform, NavController } from '@ionic/angular';
+import { Platform, NavController, ModalController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { modalkeyPage } from './components/modalkey/modalkey.component';
+ 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -51,6 +52,7 @@ export class AppComponent {
     }
   ];
   constructor(
+    public modalController: ModalController,
     public navController: NavController,
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -79,9 +81,21 @@ export class AppComponent {
   checkNewKey(){
     if(new Date().toDateString() !== localStorage.getItem('date')){
       localStorage.setItem('date', new Date().toDateString())
-      console.log('open modal');
+      this.presentModal();
     }
   }
+
+  async presentModal(){
+    const modal = await this.modalController.create({
+      component: modalkeyPage,
+      componentProps: {
+        'filters': {}
+      },
+      backdropDismiss: false
+    });
+    return await modal.present();
+  }
+
 
   actionBtn(action){
     switch(action) {
