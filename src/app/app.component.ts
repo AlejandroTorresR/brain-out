@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -51,6 +51,7 @@ export class AppComponent {
     }
   ];
   constructor(
+    public navController: NavController,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
@@ -64,8 +65,12 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       }
-      if(!localStorage.getItem('progressLv')){
+      let progressLv = localStorage.getItem('progressLv');
+      if(!progressLv){
         localStorage.setItem('progressLv', '/lv001')
+      }
+      if(progressLv){
+        this.navController.navigateRoot( progressLv );
       }
     });
   }
