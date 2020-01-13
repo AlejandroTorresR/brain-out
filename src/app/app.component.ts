@@ -72,7 +72,15 @@ export class AppComponent {
       if(progressLv){
         this.navController.navigateRoot( progressLv );
       }
+      this.checkNewKey();
     });
+  }
+
+  checkNewKey(){
+    if(new Date().toDateString() !== localStorage.getItem('date')){
+      localStorage.setItem('date', new Date().toDateString())
+      console.log('open modal');
+    }
   }
 
   actionBtn(action){

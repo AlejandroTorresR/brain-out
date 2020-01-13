@@ -7,15 +7,7 @@ export class GeneralService {
   public keys: string = this.getKeys() ? this.getKeys() : '0';
 
   constructor(public navController: NavController) {
-      this.getActualDate()
-    }
 
-    getActualDate(){
-      console.log(new Date().toDateString())
-    }
-
-    getLocalDate(){
-      return localStorage.getItem('date')
     }
 
     getKeys(){
