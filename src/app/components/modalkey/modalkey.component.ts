@@ -8,6 +8,14 @@ import { ModalController, NavParams } from '@ionic/angular';
 })
 export class modalkeyPage implements OnInit {
 
+  public interactiveKeys = {
+    loop: false,
+    prerender: true,
+    autoplay: true,
+    autoloadSegments: true,
+    path: 'assets/lottie/modalkey.json'
+  };
+
 	constructor(
 		public modalController:ModalController, 
 		private navParams: NavParams) {
@@ -21,5 +29,6 @@ export class modalkeyPage implements OnInit {
 	close(){
 		this.modalController.dismiss()
 	}
+
 
 }

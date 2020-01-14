@@ -75,6 +75,7 @@ export class AppComponent {
         this.navController.navigateRoot( progressLv );
       }
       this.checkNewKey();
+      this.presentModal();
     });
   }
 

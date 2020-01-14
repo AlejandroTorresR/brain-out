@@ -1,9 +1,12 @@
-<ion-content>
-	<ion-fab vertical="top" horizontal="end" slot="fixed">
-		<ion-fab-button (click)="close()" color="danger" size="small">
-			<ion-icon name="close"></ion-icon>
-		</ion-fab-button>
-	</ion-fab>
-
-  <p>Modal Works!</p>
+<ion-content class="ion-padding ion-text-center">
+  <h1 class="animated fadeIn">¡Bienvenido de nuevo!</h1>
+  <lottie-animation-view
+    class="modalkeys"
+    [options]="interactiveKeys">
+  </lottie-animation-view>
+  <div class="animated fadeInUp delay-1s">
+    <h3>¡Te regalamos una llave al día!</h3>
+    <ion-badge color="warning">.<h1><ion-icon name="key"></ion-icon></h1>+1</ion-badge><br>
+    <ion-button (click)="close()">Obtener</ion-button>
+  </div>
 </ion-content>
