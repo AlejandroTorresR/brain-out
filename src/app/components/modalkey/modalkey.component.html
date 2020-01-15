@@ -1,12 +1,14 @@
 <ion-content class="ion-padding ion-text-center">
-  <h1 class="animated fadeIn">¡Bienvenido de nuevo!</h1>
+  <div class="animated fadeIn delay-1s">
+    <h1>¡Bienvenido de nuevo!</h1>
+    <p>¡Te regalamos una llave al día!</p>
+  </div>
   <lottie-animation-view
     class="modalkeys"
+    (animCreated)="handleAnimation($event)"
     [options]="interactiveKeys">
   </lottie-animation-view>
   <div class="animated fadeInUp delay-1s">
-    <h3>¡Te regalamos una llave al día!</h3>
-    <ion-badge color="warning">.<h1><ion-icon name="key"></ion-icon></h1>+1</ion-badge><br>
     <ion-button (click)="close()">Obtener</ion-button>
   </div>
 </ion-content>
