@@ -36,9 +36,6 @@ export class lv002Page {
       this.alertService.presentAlert(this.params[3], this.params[4], '/lv002', '/lv003');
     } else {
       this.error = answer;
-      setTimeout(()=>{
-        this.error = '';
-      }, 1000)
     }
   }
 

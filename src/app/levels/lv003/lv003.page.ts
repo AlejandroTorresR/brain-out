@@ -36,9 +36,6 @@ export class lv003Page {
       this.alertService.presentAlert(this.params[3], this.params[4], '/lv003', '/lv004');
     } else {
       this.error = fruit;
-      setTimeout(()=>{
-        this.error = '';
-      }, 1000)
     }
   }
 

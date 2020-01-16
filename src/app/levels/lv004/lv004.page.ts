@@ -27,24 +27,23 @@ export class lv004Page {
   public anim: any;
   public error: string;
   public success: string;
+  public timeoutID;
 
-  constructor(public alertService: AlertService) {}
+  constructor(public alertService: AlertService) {
+  }
 
   getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   clickFruit(fruit){
-    console.log(fruit)
     if(fruit === 'watermelon'){
       this.success = fruit;
       this.playLottie();
       this.alertService.presentAlert(this.params[3], this.params[4], '/lv004', '/lv005');
     } else {
       this.error = fruit;
-      setTimeout(()=>{
-        this.error = '';
-      }, 1000)
+      //setTimeout(()=>{ this.error = ''; }, 1000);
     }
   }
 

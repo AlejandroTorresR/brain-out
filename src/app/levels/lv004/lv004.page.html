@@ -17,6 +17,7 @@
 <ion-content>
 
   <lottie-animation-view
+    class="lottie-animation"
     [hidden]="anim.isPaused"
     (animCreated)="handleAnimation($event)"
     [options]="interactiveAnimationOption">
@@ -32,7 +33,7 @@
         <div class="choice success animated rubberBand" *ngIf="'watermelon' === success"><ion-icon name="checkmark"></ion-icon></div>
       </div>
       <div class="fruit" (tap)="clickFruit(i)" cdkDrag>
-        <div class="choice error animated heartBeat" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
+        <div class="choice error animated bounceOut slow" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
         <div class="choice success animated rubberBand" *ngIf="f === success"><ion-icon name="checkmark"></ion-icon></div>
         <img src="assets/lv004/watermelon-1.svg" />
       </div>
