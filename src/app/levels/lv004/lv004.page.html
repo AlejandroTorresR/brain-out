@@ -7,20 +7,6 @@
       <ion-button routerLink="/home" [routerDirection]="'root'">
         <ion-icon name="apps"></ion-icon>
       </ion-button>
-    </ion-buttons>
-    <ion-title>
-      {{params[1]}}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-  <div class="actions">
-    <ion-buttons>
-      <ion-button routerLink="/home" [routerDirection]="'root'">
-        <ion-icon name="apps"></ion-icon>
-      </ion-button>
       <ion-button (click)="refresh()">
         <ion-icon name="refresh"></ion-icon>
       </ion-button>
@@ -29,7 +15,13 @@
         <span>{{generalService.keys}}</span>
       </ion-button>
     </ion-buttons>
-  </div>
+    <ion-title>
+      {{params[1]}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
 
   <lottie-animation-view
     class="lottie-animation"
