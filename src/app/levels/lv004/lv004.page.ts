@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertService } from '../../providers/alert.service';
+import { GeneralService } from '../../providers/general.service';
 
 @Component({
   selector: 'app-lv004',
@@ -14,7 +15,7 @@ export class lv004Page {
     '!Felicidades!',
     '¡Eres brillante!'
   ];
-  public answer: any = this.getRandomArbitrary(0,5)
+  public answer: any = this.getRandomArbitrary(0,5);
 
   public interactiveAnimationOption = {
     loop: false,
@@ -27,9 +28,9 @@ export class lv004Page {
   public anim: any;
   public error: string;
   public success: string;
-  public timeoutID;
+  public dragPosition = {x: 0, y: 0};
 
-  constructor(public alertService: AlertService) {
+  constructor(public alertService: AlertService, public generalService: GeneralService) {
   }
 
   getRandomArbitrary(min, max) {
@@ -43,7 +44,6 @@ export class lv004Page {
       this.alertService.presentAlert(this.params[3], this.params[4], '/lv004', '/lv005');
     } else {
       this.error = fruit;
-      //setTimeout(()=>{ this.error = ''; }, 1000);
     }
   }
 
@@ -54,6 +54,11 @@ export class lv004Page {
 
   handleAnimation(anim) {
     this.anim = anim;
+  }
+
+  refresh() {
+    this.dragPosition = {x: this.dragPosition.x, y: this.dragPosition.y};
+    this.answer = this.getRandomArbitrary(0,5);
   }
 
 }

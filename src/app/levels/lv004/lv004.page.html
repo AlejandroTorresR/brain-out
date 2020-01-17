@@ -16,6 +16,21 @@
 
 <ion-content>
 
+  <div class="actions">
+    <ion-buttons>
+      <ion-button routerLink="/home" [routerDirection]="'root'">
+        <ion-icon name="apps"></ion-icon>
+      </ion-button>
+      <ion-button (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </ion-button>
+      <ion-button (click)="generalService.removeKeys()">
+        <ion-icon name="key"></ion-icon>
+        <span>{{generalService.keys}}</span>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
   <lottie-animation-view
     class="lottie-animation"
     [hidden]="anim.isPaused"
@@ -32,7 +47,7 @@
         <img src="assets/lv004/watermelon-2.svg">
         <div class="choice success animated rubberBand" *ngIf="'watermelon' === success"><ion-icon name="checkmark"></ion-icon></div>
       </div>
-      <div class="fruit" (tap)="clickFruit(i)" cdkDrag>
+      <div class="fruit" (tap)="clickFruit(i)" cdkDrag [cdkDragFreeDragPosition]="dragPosition">
         <div class="choice error animated bounceOut slow" *ngIf="f === error"><ion-icon name="close"></ion-icon></div>
         <div class="choice success animated rubberBand" *ngIf="f === success"><ion-icon name="checkmark"></ion-icon></div>
         <img src="assets/lv004/watermelon-1.svg" />
