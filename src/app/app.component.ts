@@ -80,7 +80,6 @@ export class AppComponent {
 
   checkNewKey(){
     if(new Date().toDateString() !== localStorage.getItem('date')){
-      localStorage.setItem('date', new Date().toDateString())
       this.presentModal();
     }
   }

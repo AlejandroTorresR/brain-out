@@ -39,6 +39,7 @@ export class modalkeyPage implements OnInit {
 	close(){
 		this.modalController.dismiss();
     this.generalService.pushKeys();
+    localStorage.setItem('date', new Date().toDateString());
 	}
 
 
