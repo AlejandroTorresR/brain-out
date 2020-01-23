@@ -16,11 +16,6 @@ export class AppComponent {
   }
   public appPages = [
     {
-      title: 'Bono diario',
-      url: '/calendar',
-      icon: 'calendar'
-    },
-    {
       title: 'Tienda',
       url: '/cart',
       icon: 'cart'
@@ -41,13 +36,8 @@ export class AppComponent {
       icon: 'share'
     },
     {
-      title: 'Terminos y condiciones',
+      title: 'Términos y condiciones',
       url: '/terms',
-      icon: 'clipboard'
-    },
-    {
-      title: 'Poilitica de privacidad',
-      url: '/privacy',
       icon: 'copy'
     }
   ];

@@ -1,11 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
       <ion-content>
         <ion-row class="btn-row">
           <ion-col class="ion-text-center">
@@ -27,6 +22,15 @@
             </ion-button>
           </ion-col>
         </ion-row>
+
+        <ion-item>
+          <ion-label>Idioma</ion-label>
+          <ion-select placeholder="Select One" value="Es">
+            <ion-select-option value="Es">Español</ion-select-option>
+            <ion-select-option value="En">English</ion-select-option>
+          </ion-select>
+        </ion-item>
+
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
