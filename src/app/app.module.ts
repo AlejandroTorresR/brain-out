@@ -13,7 +13,6 @@ import { AlertService } from './providers/alert.service';
 import { GeneralService } from './providers/general.service';
 
 import { ModalKeyPageModule } from './components/modalkey/modalkey.module';
-import { HeaderToolsPageModule } from './components/headerTools/headerTools.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +21,7 @@ import { HeaderToolsPageModule } from './components/headerTools/headerTools.modu
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    ModalKeyPageModule
+    ModalKeyPageModule,
   ],
   providers: [
     StatusBar,

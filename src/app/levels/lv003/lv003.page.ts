@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertService } from '../../providers/alert.service';
+import { GeneralService } from '../../providers/general.service';
 
 @Component({
   selector: 'app-lv003',
@@ -27,7 +28,7 @@ export class lv003Page {
   public error: string;
   public success: string;
 
-  constructor(public alertService: AlertService) {}
+  constructor(public alertService: AlertService, public generalService: GeneralService) {}
 
   clickFruit(fruit){
     if(fruit === 'sun'){
