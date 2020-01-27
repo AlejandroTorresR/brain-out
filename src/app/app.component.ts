@@ -3,12 +3,17 @@ import { Platform, NavController, ModalController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { modalkeyPage } from './components/modalkey/modalkey.component';
+import { TranslateConfigService } from './providers/translate-config.service';
  
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  isNew = true;
+  public selectedLanguage: any;
+  public langs: any = ['es', 'en']
+
   public actions = {
     music: false,
     sound: false,
@@ -42,12 +47,14 @@ export class AppComponent {
     }
   ];
   constructor(
+    private translateConfigService: TranslateConfigService,
     public modalController: ModalController,
     public navController: NavController,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
+    this.selectedLanguage = this.translateConfigService.getDefaultLanguage();
     this.initializeApp();
   }
 
@@ -98,5 +105,9 @@ export class AppComponent {
         this.actions.vibrate = !this.actions.vibrate
         break;
     }
+  }
+
+  languageChanged(){
+    this.translateConfigService.setLanguage(this.selectedLanguage);
   }
 }

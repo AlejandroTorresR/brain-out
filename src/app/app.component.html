@@ -25,9 +25,8 @@
 
         <ion-item>
           <ion-label>Idioma</ion-label>
-          <ion-select placeholder="Select One" value="Es">
-            <ion-select-option value="Es">Español</ion-select-option>
-            <ion-select-option value="En">English</ion-select-option>
+              <ion-select name="model" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
+            <ion-select-option *ngFor="let model of langs" [value]="model">{{ model }}</ion-select-option>
           </ion-select>
         </ion-item>
 
